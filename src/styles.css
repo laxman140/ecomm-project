@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.common-form {
+    text-align: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 300px;
+
+    .form-input {
+        height: 35px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        color: blueviolet;
+        border: 1px solid blueviolet;
+    }
+
+    .form-button {
+        height: 35px;
+        color: blueviolet;
+        cursor: pointer;
+        border: 1px solid blueviolet;
+    }
+}

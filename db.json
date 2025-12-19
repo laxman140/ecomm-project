@@ -1,0 +1,58 @@
+{
+  "seller": [
+    {
+      "id": "d8a4",
+      "name": "Sachin Tedulkar",
+      "email": "sachin@seller.com",
+      "password": "sachin@123"
+    },
+    {
+      "id": "c221",
+      "name": "Virat Kohli",
+      "email": "virat@seller.com",
+      "password": "virat@123"
+    },
+    {
+      "id": "691b",
+      "name": "Mahesh Babu",
+      "password": "Mahesh@123",
+      "email": "mahesh@seller.com"
+    },
+    {
+      "id": "a0eb",
+      "name": "Laxman",
+      "password": "nayak",
+      "email": "laxman@seller.com"
+    },
+    {
+      "id": "1e4f",
+      "name": "jack",
+      "password": "kjgjgkjack@t",
+      "email": "jack@test.com"
+    },
+    {
+      "id": "e51e",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "f2ec",
+      "name": "minakshi",
+      "password": "min@1234",
+      "email": "mina@gmail.com"
+    },
+    {
+      "id": "f793",
+      "name": "anil",
+      "password": "anil@1234",
+      "email": "anil@test.com"
+    },
+    {
+      "id": "63f3",
+      "name": "hukk",
+      "password": "hukk@123",
+      "email": "hukk@test.com"
+    }
+  ]
+}
