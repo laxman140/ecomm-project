@@ -6,6 +6,10 @@
         color: blueviolet;
         margin: 0;
         font-size: 40px;
+        a{
+            text-decoration: none;
+            color: blueviolet;
+        }
     }
 
     ul {
@@ -36,7 +40,7 @@
         input {
             color: blueviolet;
             border: 1px solid blueviolet;
-            height: 35px;
+            height: 39px;
             border-right: 0;
             flex: 1;
         }

@@ -1,0 +1,19 @@
+
+table{
+    text-align: left;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+    border-collapse: collapse;
+    td{
+        border: 1px solid blueviolet;
+        padding: 10px;
+    }
+    th{
+        border: 1px solid blueviolet;
+        padding: 10px;
+    }
+}
+img{
+    width: 100px;
+    height: 100px;
+}

@@ -57,3 +57,15 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Project related notes
+1.Need to install json server to use api ,here db.json file used by json server
+
+- npm install json-server
+- Create a db.json or db.json5 file
+- npx json-server db.json
+
+follow json server git hub link for more details:- https://github.com/typicode/json-server
+
+2. ng add @fortawesome/angular-fontawesome
+3. ng add @ng-bootstrap/ng-bootstrap

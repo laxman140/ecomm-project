@@ -1,1 +1,35 @@
-<p>seller-home works!</p>
+<div class="product-list">
+    <h1>Product List</h1>
+    <p *ngIf="actionMsg" class="message-p">{{actionMsg}}</p>
+    <!-- <div *ngFor="let product of productList">
+        <h3>{{product.name}}</h3>
+        <p>Price: {{product.price}}</p>
+        <p>Category: {{product.category}}</p>
+        <p>Description: {{product.description}}</p>
+        <img [src]="product.image" alt="{{product.name}}" width="100">
+        <hr>    
+    </div> -->
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let product of productList">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.description}}</td>
+            <td><img [src]="product.image" alt="{{product.name}}"></td>
+            <td> 
+                <fa-icon (click)="deleteProduct(product.id)" [icon]="icon" />
+                <fa-icon (click)="editProduct(product.id)" [icon]="editIcon" />
+            </td>
+        </tr>
+    </table>
+</div>
