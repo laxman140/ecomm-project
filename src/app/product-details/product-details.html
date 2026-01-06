@@ -1,0 +1,19 @@
+<div class="row product-details">
+    <div class="col-sm-6 image-section" *ngIf="productDetails">
+        <img class="product-image" [src]="productDetails.image" alt="Product Image">
+    </div>
+    <div class="col-sm-6 details-section">
+        <h2>{{productDetails?.name}}</h2>
+        <h3>Price: ${{productDetails?.price}}</h3>
+        <h6>Category: {{productDetails?.category}}</h6>
+        <h6>Description: {{productDetails?.description}}</h6>
+        <button *ngIf="!removeCart" class="form-button" (click)="addToCart()">Add to Cart</button>
+        <button *ngIf="removeCart" class="form-button" (click)="removeFromCart()">Remove from Cart</button>
+        <button class="form-button">Buy Now</button>
+        <div class="quantity-group">
+            <button *ngIf="!removeCart" (click)="handleQuantity('minus')">-</button>
+            <input *ngIf="!removeCart" type="text" [value]="count" readonly>
+            <button *ngIf="!removeCart" (click)="handleQuantity('plus')">+</button>
+        </div>
+    </div>
+</div>

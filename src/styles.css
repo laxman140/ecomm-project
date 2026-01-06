@@ -33,3 +33,27 @@ body {
 .message-p{
     color: green;
 }
+.error-p{
+    color: red;
+}
+.carousel-caption {
+    border-radius: 5px;
+    background-color: #000000b3;
+    color: blueviolet;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+   background-color: blueviolet;
+   border-radius: 5px;
+}
+.invalid-input {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+button[disabled] {
+    background-color: grey;
+    border-color: grey;
+    cursor: not-allowed;
+}

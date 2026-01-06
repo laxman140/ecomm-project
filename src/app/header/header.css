@@ -6,7 +6,8 @@
         color: blueviolet;
         margin: 0;
         font-size: 40px;
-        a{
+
+        a {
             text-decoration: none;
             color: blueviolet;
         }
@@ -25,6 +26,7 @@
             a {
                 text-decoration: none;
                 color: blueviolet;
+                cursor: pointer;
             }
         }
     }
@@ -36,6 +38,24 @@
         margin-left: 5%;
         margin-right: 5%;
         display: flex;
+
+        .suggested-results {
+            position: absolute;
+            display: list-item;
+            z-index: 10;
+            background-color: #fff;
+            width: 300px;
+            top: 40px;
+            border: 1px solid #ddd;
+            li{
+                padding: 5px;
+                border: 1px solid #ddd;
+                a{
+                    cursor: pointer;
+                    color: blueviolet;
+                }
+            }
+        }
 
         input {
             color: blueviolet;

@@ -79,6 +79,64 @@
       "description": "This product came to market on 2025",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkTuyhEtWaj1UZknQXNFNhWCIUGsRZTOoCEw&s",
       "id": "f732"
+    },
+    {
+      "name": "Nike Shoe",
+      "price": "13000",
+      "category": "Shoe",
+      "description": "Its very comfortable for running",
+      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/47b7945e-a379-4c24-b9df-98f4eef178e5/NIKE+AIR+MAX+PLUS.png",
+      "id": "28eb"
+    },
+    {
+      "name": "Nike Shoe",
+      "price": "14000",
+      "category": "Shoe",
+      "description": "Running show",
+      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/f4d65a27-b6a0-4fce-8537-c2f2fbb5bd3e/W+NIKE+AIR+ZOOM+BELLA+7.png",
+      "id": "3625"
+    },
+    {
+      "id": "a319",
+      "name": "Schott",
+      "price": 34000,
+      "category": "Electronics",
+      "description": "One of the best watch",
+      "image": "https://www.schott.com/-/media/project/onex/shared/teasers/consumer-electronics/consumer-electronics_01-displays_00_720x450.jpg?rev=fe6df7a508644a7d8e294e6c294a317b"
+    },
+    {
+      "id": "41b3",
+      "name": "Toy Car",
+      "price": 499,
+      "category": "Toy",
+      "description": "Kids toy product",
+      "image": "https://images.naptol.com/usr/local/csp/staticContent/product_images/horizontal/750x750/Pull-String-Car-Toy-for-Kids-1.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "5c35",
+      "name": "Jack",
+      "email": "jack@test.com",
+      "password": "jackUser"
+    },
+    {
+      "id": "d86d",
+      "name": "bruce",
+      "email": "bruce@user.com",
+      "password": "abc123"
+    },
+    {
+      "id": "678d",
+      "name": "manik",
+      "email": "manik@gmail.com",
+      "password": "manik123"
+    },
+    {
+      "id": "625b",
+      "name": "anil",
+      "email": "anil@test.com",
+      "password": "fsdhg"
     }
   ]
 }

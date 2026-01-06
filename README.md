@@ -69,3 +69,5 @@ follow json server git hub link for more details:- https://github.com/typicode/j
 
 2. ng add @fortawesome/angular-fontawesome
 3. ng add @ng-bootstrap/ng-bootstrap
+
+Check search api(json server api) its not working now , need to add the own code for search filter
