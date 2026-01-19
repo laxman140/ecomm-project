@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { LogIn, SignUp } from '../data-type';
+import { Cart, LogIn, Product, SignUp } from '../data-type';
 import { UserService } from '../services/user-service';
 import { Router } from '@angular/router';
+import { ProductService } from '../services/product-service';
 
 @Component({
   selector: 'app-user-auth',
@@ -14,7 +15,7 @@ import { Router } from '@angular/router';
 export class UserAuth {
   showLogin: boolean = true;
   authError: string = '';
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router, private productService: ProductService) { }
 
   ngOnInit(): void {
     this.userService.userAuthReload();
@@ -30,7 +31,7 @@ export class UserAuth {
         alert('Invalid Credentials. Please try again.');
         this.authError = 'Invalid email or password';
       } else {
-        // Successful login actions can be handled here if needed
+        this.localCartToRemoteCart();
       }
     });
   }
@@ -41,5 +42,37 @@ export class UserAuth {
 
   openSignUp() {
     this.showLogin = false;
+  }
+
+  localCartToRemoteCart() {
+    let data = localStorage.getItem('localCart');
+    let userStore = localStorage.getItem('user');
+    console.warn("user", userStore);
+    let userId = userStore && JSON.parse(userStore).id;
+    if (data) {
+      let cartDataList: Product[] = JSON.parse(data);
+      cartDataList.forEach((product: Product, index: number) => {
+        let cartData: Cart = {
+          ...product,
+          productId: product.id,
+          userId
+        }
+        delete cartData.id;
+        console.warn(cartData);
+        setTimeout(() => {
+          this.productService.addToCart(cartData).subscribe((result) => {
+            if (result) {
+              console.warn("Item stored in DB");
+            }
+          });
+          if (cartDataList.length === index + 1) {
+            localStorage.removeItem('localCart');
+          }
+        }, 500);
+      });
+    }
+    setTimeout(() => {
+      this.productService.getCartList(userId);
+    }, 2000);
   }
 }

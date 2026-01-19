@@ -20,6 +20,7 @@ export class Header implements OnInit {
   cartItems = 0;
 
   ngOnInit(): void {
+
     this.router.events.subscribe((val: any) => {
       if (val.url) {
         console.warn(val.url);
@@ -34,7 +35,8 @@ export class Header implements OnInit {
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
           this.username = userData.name;
-          console.warn("in user home");
+          console.warn("in user home ", userStore);
+          this.productService.getCartList(userData.id);
         }
         else {
           console.warn("not in seller home");
@@ -59,6 +61,7 @@ export class Header implements OnInit {
   userLogout() {
     localStorage.removeItem('user');
     this.router.navigate(['/user-auth']);
+    this.productService.cartData.emit([]);
   }
 
   searchProducts(query: KeyboardEvent) {

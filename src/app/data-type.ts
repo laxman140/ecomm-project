@@ -16,5 +16,34 @@ export interface Product {
     category: string,
     description: string,
     image: string,
-    quantity: undefined | number
+    quantity: undefined | number,
+    productId: undefined | string
+}
+
+export interface Cart{
+    id: string | undefined,
+    name: string,
+    price: number,
+    category: string,
+    description: string,
+    image: string,
+    quantity: undefined | number,
+    userId: number,
+    productId: string
+}
+
+export interface priceSummary{
+    price:number,
+    tax:number,
+    discount: number,
+    delivery:number,
+    total:number
+}
+export interface Order{
+    email:string,
+    address:string,
+    contact:string,
+    totalPrice:number,
+    userId:string,
+    id: string | undefined
 }

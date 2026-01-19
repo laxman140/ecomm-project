@@ -138,5 +138,80 @@
       "email": "anil@test.com",
       "password": "fsdhg"
     }
+  ],
+  "cart": [
+    {
+      "id": "f6c6",
+      "name": "Hp Laptop",
+      "price": 79000,
+      "category": "Laptop",
+      "description": "This product came to market on 2025",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkTuyhEtWaj1UZknQXNFNhWCIUGsRZTOoCEw&s",
+      "quantity": 1,
+      "productId": "f732",
+      "userId": "625b"
+    },
+    {
+      "id": "2480",
+      "name": "iphone 14 plus",
+      "price": 67000,
+      "category": "electronics",
+      "description": "This is a very good phone",
+      "image": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907_Full-Bleed-Image.jpg.large.jpg",
+      "quantity": 1,
+      "productId": "0a5d",
+      "userId": "625b"
+    },
+    {
+      "id": "804d",
+      "name": "iphone 14 plus",
+      "price": 67000,
+      "category": "electronics",
+      "description": "This is a very good phone",
+      "image": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907_Full-Bleed-Image.jpg.large.jpg",
+      "quantity": 1,
+      "productId": "0a5d",
+      "userId": "678d"
+    },
+    {
+      "id": "4401",
+      "name": "Hp Laptop",
+      "price": 79000,
+      "category": "Laptop",
+      "description": "This product came to market on 2025",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkTuyhEtWaj1UZknQXNFNhWCIUGsRZTOoCEw&s",
+      "quantity": 1,
+      "productId": "f732",
+      "userId": "678d"
+    },
+    {
+      "id": "3e02",
+      "name": "iphone 14 plus",
+      "price": 67000,
+      "category": "electronics",
+      "description": "This is a very good phone",
+      "image": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907_Full-Bleed-Image.jpg.large.jpg",
+      "quantity": 1,
+      "productId": "0a5d",
+      "userId": "d86d"
+    }
+  ],
+  "orders": [
+    {
+      "id": "4e28",
+      "email": "jack@test.com",
+      "address": "Bangalore",
+      "contact": "098687609",
+      "totalPrice": 482160,
+      "userId": "5c35"
+    },
+    {
+      "id": "aec0",
+      "email": "jack@test.com",
+      "address": "BBSR",
+      "contact": "8675698708",
+      "totalPrice": 123160,
+      "userId": "5c35"
+    }
   ]
 }

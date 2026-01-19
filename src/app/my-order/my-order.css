@@ -1,0 +1,17 @@
+.my-order {
+    margin-bottom: 100px;
+    h1 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .order-data {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        .order-img {
+            height: 50px;
+        }
+    }
+}

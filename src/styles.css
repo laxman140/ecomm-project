@@ -32,6 +32,7 @@ body {
 }
 .message-p{
     color: green;
+    text-align: center;
 }
 .error-p{
     color: red;
@@ -56,4 +57,8 @@ button[disabled] {
     background-color: grey;
     border-color: grey;
     cursor: not-allowed;
+}
+
+.max-width{
+    width: 100%;
 }
