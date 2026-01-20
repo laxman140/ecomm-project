@@ -3,6 +3,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { ProductService } from '../services/product-service';
 import { Product } from '../data-type';
+import { Seller } from '../services/seller';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,7 @@ export class Header implements OnInit {
   sellerName: string = '';
   username: string = '';
   private productService = inject(ProductService);
+  private sellerService = inject(Seller);
   searchResult: undefined | Product[];
   cartItems = 0;
 
@@ -23,14 +25,14 @@ export class Header implements OnInit {
 
     this.router.events.subscribe((val: any) => {
       if (val.url) {
-        console.warn(val.url);
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
           console.warn("in seller home");
           this.menuType = 'seller';
           let sellerStore = localStorage.getItem('seller');
-          let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-          this.sellerName = sellerData.name;
+          let sellerData = sellerStore && JSON.parse(sellerStore);
+          this.sellerName = Array.isArray(sellerData) ? sellerData[0].name : sellerData.name;
         } else if (localStorage.getItem('user')) {
+          console.warn("in user/home area");
           this.menuType = 'user';
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
@@ -39,7 +41,7 @@ export class Header implements OnInit {
           this.productService.getCartList(userData.id);
         }
         else {
-          console.warn("not in seller home");
+          console.warn("default area");
           this.menuType = 'default';
         }
       }
@@ -56,6 +58,7 @@ export class Header implements OnInit {
   logout() {
     localStorage.removeItem('seller');
     this.router.navigateByUrl('');
+    this.sellerService.isSellerLoggedIn.next(false);
     //this.route.navigate(['/'])
   }
   userLogout() {

@@ -26,7 +26,6 @@ export class SellerAuth implements OnInit {
     this.showLogIn = flag;
   }
   login(logInData: LogIn): void {
-   console.warn("login credential",logInData)
    this.authError = ''
    this.seller.userLogin(logInData);
    this.seller.isLoginError.subscribe((isError)=>{

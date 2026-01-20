@@ -50,6 +50,7 @@ export class ProductService {
       localStorage.setItem('localCart', JSON.stringify(cartData));
       //this.cartData.emit(cartData);
     } else {
+      console.warn("else part");
       cartData = JSON.parse(localCart);
       cartData.push(productDetails);
       localStorage.setItem('localCart', JSON.stringify(cartData));
@@ -61,7 +62,7 @@ export class ProductService {
     if (cartData) {
       let items: Product[] = JSON.parse(cartData);
       items = items.filter((item: Product) => productId !== item.id);
-      localStorage.setItem('localCart', JSON.stringify(items));
+      !items.length ? localStorage.removeItem('localCart') :localStorage.setItem('localCart', JSON.stringify(items));
       this.cartData.emit(items); //check where we are using this cartData field for this service file
     }
   }

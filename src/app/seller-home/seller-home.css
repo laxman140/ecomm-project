@@ -4,6 +4,7 @@ table{
     color: blueviolet;
     border: 1px solid blueviolet;
     border-collapse: collapse;
+    width: 100%;
     td{
         border: 1px solid blueviolet;
         padding: 10px;
@@ -16,4 +17,11 @@ table{
 img{
     width: 100px;
     height: 100px;
+}
+
+h1 {
+    margin-bottom: 50px;
+    margin-top: 80px;
+    color: blueviolet;
+    text-align: center;
 }

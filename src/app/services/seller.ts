@@ -14,9 +14,8 @@ export class Seller {
   isLoginError = new EventEmitter(false);
 
   userSignUp(data: SignUp) {
-    console.warn("Service call");
-    this.http.post("http://localhost:3000/seller", data, { observe: 'response' }).
-      subscribe((result) => {
+     this.http.post("http://localhost:3000/seller", data, { observe: 'response' })
+      .subscribe((result) => {
         this.isSellerLoggedIn.next(true);
         localStorage.setItem('seller', JSON.stringify(result.body))
         this.router.navigate(['seller-home']);
@@ -30,14 +29,12 @@ export class Seller {
   }
 
   userLogin(data: LogIn) {
-    console.log("login data", data)
     //api call will be here
     this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`,
       { observe: 'response' }
     ).subscribe((result: any) => {
-      console.warn("result", result);
       if (result && result.body && result.body.length) {
-        console.log("user logged in")
+        this.isSellerLoggedIn.next(true);
         localStorage.setItem('seller', JSON.stringify(result.body))
         this.router.navigate(['seller-home']);
       }

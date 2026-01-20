@@ -80,7 +80,7 @@ export class ProductDetails {
         this.productService.addToCart(cartData).subscribe((result) => {
           if (result) {
             this.productService.getCartList(userId);
-            this.removeCart = true;
+           // this.removeCart = true;
           }
         });
       }

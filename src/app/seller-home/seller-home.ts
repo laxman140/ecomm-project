@@ -26,7 +26,6 @@ export class SellerHome {
 
   findProductList() {
     this.productService.getProductList().subscribe((result)=>{
-      console.warn(result);
       this.productList=result;
     });
   }

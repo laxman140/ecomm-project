@@ -19,16 +19,16 @@
          <ul *ngSwitchCase="'user'">
              <li><a routerLink="seller-auth">Seller</a></li>
             <li><a routerLink="">Home</a></li>
-            <li><a>{{username | titlecase}}</a></li>
             <li><a routerLink="my-order">My Order</a></li>
+            <li><a>{{username | titlecase}}</a></li>
             <li><a (click)="userLogout()">Logout</a></li>
             <li><a [routerLink]="cartItems>0?'cart-page':null">Cart({{cartItems}})</a></li>
         </ul>
         <ul *ngSwitchCase="'seller'">
-            <li><a routerLink="seller-home">Product List</a></li>
             <li><a routerLink="seller-add-product">Add Products</a></li>
+            <li><a routerLink="seller-home">List</a></li>
             <li><a (click)="logout()">Logout</a></li>
-            <li><a href="#">{{sellerName | titlecase}}</a></li>
+             <li><a href="#">{{sellerName | titlecase}}</a></li>
         </ul>
     </div>
 </nav>

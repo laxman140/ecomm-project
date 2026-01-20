@@ -28,7 +28,6 @@ export class UserAuth {
     this.userService.userLogin(data);
     this.userService.invalidUserAuth.subscribe((isInvalid: boolean) => {
       if (isInvalid) {
-        alert('Invalid Credentials. Please try again.');
         this.authError = 'Invalid email or password';
       } else {
         this.localCartToRemoteCart();
@@ -56,7 +55,7 @@ export class UserAuth {
           ...product,
           productId: product.id,
           userId
-        }
+        };
         delete cartData.id;
         console.warn(cartData);
         setTimeout(() => {

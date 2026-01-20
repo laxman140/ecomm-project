@@ -7,40 +7,10 @@
       "password": "sachin@123"
     },
     {
-      "id": "c221",
-      "name": "Virat Kohli",
-      "email": "virat@seller.com",
-      "password": "virat@123"
-    },
-    {
-      "id": "691b",
-      "name": "Mahesh Babu",
-      "password": "Mahesh@123",
-      "email": "mahesh@seller.com"
-    },
-    {
-      "id": "a0eb",
-      "name": "Laxman",
-      "password": "nayak",
-      "email": "laxman@seller.com"
-    },
-    {
       "id": "1e4f",
       "name": "jack",
       "password": "kjgjgkjack@t",
       "email": "jack@test.com"
-    },
-    {
-      "id": "e51e",
-      "name": "",
-      "password": "",
-      "email": ""
-    },
-    {
-      "id": "f2ec",
-      "name": "minakshi",
-      "password": "min@1234",
-      "email": "mina@gmail.com"
     },
     {
       "id": "f793",
@@ -53,6 +23,30 @@
       "name": "hukk",
       "password": "hukk@123",
       "email": "hukk@test.com"
+    },
+    {
+      "id": "4f41",
+      "name": "john",
+      "password": "jon123",
+      "email": "john@test.com"
+    },
+    {
+      "id": "d0e5",
+      "name": "peter",
+      "password": "peter123",
+      "email": "peter@gmail.com"
+    },
+    {
+      "id": "e00a",
+      "name": "jack1",
+      "password": "jack123",
+      "email": "jack@test.com"
+    },
+    {
+      "id": "fed8",
+      "name": "new",
+      "password": "new",
+      "email": "new@test.com"
     }
   ],
   "products": [
@@ -111,6 +105,14 @@
       "category": "Toy",
       "description": "Kids toy product",
       "image": "https://images.naptol.com/usr/local/csp/staticContent/product_images/horizontal/750x750/Pull-String-Car-Toy-for-Kids-1.jpg"
+    },
+    {
+      "id": "a5ff",
+      "name": "Jacket",
+      "price": 6499,
+      "category": "winter cloth",
+      "description": "Yello Jacket",
+      "image": "https://gokyo.in/cdn/shop/files/k2_downfill_jacket.jpg?v=1711966418"
     }
   ],
   "users": [
@@ -137,6 +139,12 @@
       "name": "anil",
       "email": "anil@test.com",
       "password": "fsdhg"
+    },
+    {
+      "id": "bf4c",
+      "name": "mitesh",
+      "email": "mit@test.com",
+      "password": "pwd"
     }
   ],
   "cart": [

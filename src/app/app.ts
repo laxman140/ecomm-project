@@ -11,8 +11,5 @@ import { Seller } from './services/seller';
 })
 export class App {
   protected readonly title = signal('ecomm-project');
-  // seller = inject(Seller);
-  // // ngOnInit():void{
-  // //   this.seller.reloadSeller();
-  // // }
+  seller = inject(Seller);
 }

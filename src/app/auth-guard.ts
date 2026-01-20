@@ -3,14 +3,11 @@ import { Seller } from './services/seller';
 import { inject } from '@angular/core';
 
 export const authGuard: CanActivateFn = (route, state) => {
-  const authService = inject(Seller);
-
-   if(localStorage.getItem('seller')){
-      return true;
-     // return false;
-    }
-  return authService.isSellerLoggedIn;
- //return false;
+  const sellerService = inject(Seller);
+  if(localStorage.getItem('seller')){
+    return true;
+  }
+  return sellerService.isSellerLoggedIn;
 };
 
 
